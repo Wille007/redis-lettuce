@@ -1,0 +1,31 @@
+server:
+  port: 8082
+spring:
+  cache:
+    type: redis
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    password:
+      # connection timeout
+    timeout: 1000ms
+    lettuce:
+      pool:
+        ### max blocking waiting time  timeUnit->ms
+        max-wait: 3000
+        ### max connections
+        max-active: 10
+        ### max free connections
+        max-idle: 8
+        ### free thread executor executing duration timeUnit->ms
+        time-between-eviction-runs: 1000
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    name: defaultDataSource
+    ###(GMT+4)
+    url: jdbc:mysql://127.0.0.1:3306/db_wille?serverTimezone=GMT%2B4&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 66666666
+
+
