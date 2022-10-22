@@ -19,7 +19,7 @@ spring-boot-redis->2.7.4
 ### data store type difference  
 a data collection can be saved in **GenericJackson2JsonRedisSerializer**  
 but that can not be saved in **Jackson2JsonRedisSerializer**  
-*(we are just discussing then in the redis area, but you can still use it by transfer collection to JSON String)*  
+*(we are just discussing in the redis area, but you can still use it by transfer collection to JSON String)*  
 
 ### GenericJackson2JsonRedisSerializer Saving data example
 ```json
