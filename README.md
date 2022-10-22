@@ -11,6 +11,11 @@ mybatis-plus->3.5.2
 mybatis-boot->2.2.2   
 spring-boot-redis->2.7.4  
 
+## Functions  
+
+1: Spring boot Redis Configuration  
+2: Spring Cache Using Redis  
+
 ## Redis Serializer Description:
 
 
