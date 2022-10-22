@@ -2,7 +2,7 @@
 
 Based on Maven
 
-## Version:
+## Version
 
 jdk->17  
 lombok->1.18.24  
@@ -16,7 +16,7 @@ spring-boot-redis->2.7.4
 1: Spring boot Redis Configuration  
 2: Spring Cache Using Redis  
 
-## Redis Serializer Description:
+## Redis Serializer Description
 
 
 *GenericJackson2JsonRedisSerializer VS Jackson2JsonRedisSerializer*  
