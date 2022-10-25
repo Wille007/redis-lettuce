@@ -17,27 +17,27 @@ import java.io.Serializable;
 public class UserSetParams implements Serializable {
 
     /**
-     * 用户编码
+     * user code
      */
     private String code;
 
     /**
-     * 用户名
+     * username
      */
     private String userName;
 
     /**
-     * 昵称
+     * nickname
      */
     private String nickName;
 
     /**
-     * 登录密码
+     * password
      */
     private String password;
 
     /**
-     * 私钥
+     * private key
      */
     private String privateKey;
 }

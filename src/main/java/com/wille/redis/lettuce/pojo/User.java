@@ -3,7 +3,10 @@ package com.wille.redis.lettuce.pojo;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -18,59 +21,62 @@ import java.io.Serializable;
  */
 @Data
 @TableName("tb_user")
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class User implements Serializable {
 
     @Serial
     private static final long serialVersionUID = 1L;
 
     /**
-     * 自增ID
+     * ID
      */
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
     /**
-     * 用户编码
+     * user code
      */
     private String code;
 
     /**
-     * 用户名
+     * username
      */
     private String userName;
 
     /**
-     * 昵称
+     * nickName
      */
     private String nickName;
 
     /**
-     * 登录密码
+     * password
      */
     private String password;
 
     /**
-     * 私钥
+     * private key
      */
     private String privateKey;
 
     /**
-     * 最后更新人
+     * last updated by
      */
     private String lastUpdatedBy;
 
     /**
-     * 最后更新时间
+     * last updated on
      */
     private Long lastUpdatedOn;
 
     /**
-     * 创建时间(毫秒)
+     * created on (mills)
      */
     private Long createOn;
 
     /**
-     * 创建人
+     * created by
      */
     private String createdBy;
 }

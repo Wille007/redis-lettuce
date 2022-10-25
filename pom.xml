@@ -19,6 +19,7 @@
 		<fastjson.version>2.0.15</fastjson.version>
 		<lombok.version>1.18.24</lombok.version>
 		<mybatis-boot.version>2.2.2</mybatis-boot.version>
+		<common-lang.version>3.12.0</common-lang.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -73,6 +74,12 @@
 			<groupId>com.baomidou</groupId>
 			<artifactId>mybatis-plus-boot-starter</artifactId>
 			<version>${mybatis-plus.version}</version>
+		</dependency>
+		<!--common-lang-->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${common-lang.version}</version>
 		</dependency>
 	</dependencies>
 
