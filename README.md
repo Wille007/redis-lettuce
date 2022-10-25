@@ -2,7 +2,7 @@
 
 Based on Maven
 
-## Version:
+## Version
 
 jdk->17  
 lombok->1.18.24  
@@ -11,7 +11,12 @@ mybatis-plus->3.5.2
 mybatis-boot->2.2.2   
 spring-boot-redis->2.7.4  
 
-## Redis Serializer Description:
+## Functions  
+
+1: Spring boot Redis Configuration  
+2: Spring Cache Using Redis  
+
+## Redis Serializer Description
 
 
 *GenericJackson2JsonRedisSerializer VS Jackson2JsonRedisSerializer*  
@@ -19,7 +24,7 @@ spring-boot-redis->2.7.4
 ### data store type difference  
 a data collection can be saved in **GenericJackson2JsonRedisSerializer**  
 but that can not be saved in **Jackson2JsonRedisSerializer**  
-*(we are just discussing then in the redis area, but you can still use it by transfer collection to JSON String)*  
+*(we are just discussing in the redis area, but you can still use it by transfer collection to JSON String)*  
 
 ### GenericJackson2JsonRedisSerializer Saving data example
 ```json
