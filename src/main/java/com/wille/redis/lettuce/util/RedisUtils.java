@@ -126,7 +126,8 @@ public class RedisUtils {
      * @param expireTime
      * @param unit
      */
-    public static void setHashObject(String key, Object hashKey, Object object,long expireTime, TimeUnit unit){
+    @SuppressWarnings("unchecked")
+    public static void setHashObject(String key, Object hashKey, Object object, long expireTime, TimeUnit unit){
         redisTemplate.opsForHash().put(key, hashKey,object);
         redisTemplate.expire(key,expireTime,unit);
     }
@@ -147,7 +148,8 @@ public class RedisUtils {
      * @param expireTime
      * @param unit
      */
-    public static void setObject(String key, Object object,long expireTime, TimeUnit unit){
+    @SuppressWarnings("unchecked")
+    public static void setObject(String key, Object object, long expireTime, TimeUnit unit){
         redisTemplate.opsForValue().set(key,object,expireTime,unit);
     }
     /**
@@ -169,6 +171,7 @@ public class RedisUtils {
      * @param unit
      * @param <T>
      */
+    @SuppressWarnings("unchecked")
     public static <T> void setList(String key, List<T> list, long expireTime, TimeUnit unit){
         redisTemplate.opsForList().rightPush(key,list);
         redisTemplate.expire(key,expireTime,unit);
@@ -194,6 +197,7 @@ public class RedisUtils {
      * @param unit
      * @param <T>
      */
+    @SuppressWarnings("unchecked")
     public static <T> void setHashList(String key, Object hashKey, List<T> list, long expireTime, TimeUnit unit){
         redisTemplate.opsForHash().put(key, hashKey, list);
         redisTemplate.expire(key,expireTime,unit);
@@ -315,7 +319,8 @@ public class RedisUtils {
         }
     }
 
-    public static <T> void setMap(String key, Map<String,T> map,long expireTime, TimeUnit unit){
+    @SuppressWarnings("unchecked")
+    public static <T> void setMap(String key, Map<String,T> map, long expireTime, TimeUnit unit){
         if(!CollectionUtils.isEmpty(map)) {
             redisTemplate.opsForHash().putAll(key, map);
             redisTemplate.expire(key, expireTime,unit);
